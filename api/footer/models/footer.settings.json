@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "footers",
+  "info": {
+    "name": "footer"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "copyright": {
+      "type": "string",
+      "default": "₢ [year] Everton Felix de Oliveira Gestor Imobiliário"
+    },
+    "socialLink": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.social-link"
+    }
+  }
+}
